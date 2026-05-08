@@ -76,6 +76,188 @@ td,th{padding:10px!important;border-bottom:1px solid #eee!important}
  .kaynDesktopWelcomeCard p{margin:8px 0 0;color:#ddd;font-size:13px}
 }
 
+
+/* KAYN v12.9 — UI premium limpia */
+:root{
+  --kayn-yellow:#f5c400;
+  --kayn-yellow-soft:#fff2a8;
+  --kayn-black:#070707;
+  --kayn-ink:#111827;
+  --kayn-muted:#667085;
+  --kayn-bg:#f3f5f8;
+  --kayn-card:#ffffff;
+  --kayn-border:#e6e8ec;
+  --kayn-shadow:0 14px 38px rgba(16,24,40,.10);
+}
+body{
+  background:
+    radial-gradient(circle at top left, rgba(245,196,0,.10), transparent 28%),
+    linear-gradient(180deg,#f8fafc,#eef1f5)!important;
+  color:var(--kayn-ink)!important;
+}
+header{
+  background:linear-gradient(135deg,#050505 0%,#191919 58%,#2b260f 100%)!important;
+  border-bottom:1px solid rgba(245,196,0,.22)!important;
+}
+header h1{
+  color:var(--kayn-yellow)!important;
+  font-weight:950!important;
+  letter-spacing:.4px!important;
+}
+header img{
+  box-shadow:0 0 0 1px #333, 0 0 22px rgba(245,196,0,.25)!important;
+}
+nav button{
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease!important;
+}
+nav button:hover{
+  transform:translateY(-1px)!important;
+  box-shadow:0 8px 20px rgba(0,0,0,.22)!important;
+}
+nav button.active{
+  background:linear-gradient(135deg,#f5c400,#ffe678)!important;
+  color:#000!important;
+  border-color:#f5c400!important;
+  box-shadow:0 10px 24px rgba(245,196,0,.26)!important;
+}
+main{
+  scroll-behavior:smooth!important;
+}
+.card{
+  background:rgba(255,255,255,.96)!important;
+  border:1px solid rgba(230,232,236,.95)!important;
+  box-shadow:var(--kayn-shadow)!important;
+  backdrop-filter:blur(10px)!important;
+}
+.card:hover{
+  box-shadow:0 18px 46px rgba(16,24,40,.13)!important;
+}
+.card h2{
+  color:#101828!important;
+  font-weight:950!important;
+  letter-spacing:-.35px!important;
+}
+.card h3{
+  color:#111827!important;
+  font-weight:900!important;
+}
+.note,p{
+  line-height:1.45!important;
+}
+label{
+  color:#344054!important;
+  font-size:12px!important;
+  text-transform:uppercase!important;
+  letter-spacing:.35px!important;
+}
+input,select,textarea{
+  border:1px solid #d0d5dd!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  color:#111827!important;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none!important;
+  border-color:#f5c400!important;
+  box-shadow:0 0 0 4px rgba(245,196,0,.20)!important;
+}
+button,.btn,a[style*="background"]{
+  transition:transform .15s ease, filter .15s ease, box-shadow .15s ease!important;
+}
+button:hover,a[style*="background"]:hover{
+  transform:translateY(-1px)!important;
+  filter:brightness(1.02)!important;
+}
+button.yellow,.yellow{
+  background:linear-gradient(135deg,#f5c400,#ffe574)!important;
+  color:#000!important;
+  box-shadow:0 8px 20px rgba(245,196,0,.22)!important;
+}
+button.light,.light{
+  background:#f8fafc!important;
+  color:#111827!important;
+  border:1px solid #d0d5dd!important;
+}
+.row{
+  gap:10px!important;
+}
+.row button,
+.row a{
+  margin-bottom:4px!important;
+}
+table{
+  overflow:hidden!important;
+  border-radius:16px!important;
+  border:1px solid #e6e8ec!important;
+  background:#fff!important;
+}
+th{
+  background:linear-gradient(135deg,#101010,#242424)!important;
+  color:#f5c400!important;
+  text-transform:uppercase!important;
+  font-size:12px!important;
+  letter-spacing:.35px!important;
+}
+td{
+  color:#1f2937!important;
+}
+tr:nth-child(even) td{
+  background:#fafafa!important;
+}
+.kaynDesktopWelcomeCard,
+.kaynTopCard,
+.kaynHubItem,
+.kaynPlanosTool{
+  border:1px solid rgba(245,196,0,.20)!important;
+  background:linear-gradient(135deg,#090909,#252525)!important;
+}
+.kaynDesktopWelcomeCard h2,
+.kaynDesktopWelcomeCard h3,
+.kaynTopCard strong,
+.kaynHubItem h3,
+.kaynPlanosTool h3{
+  color:#f5c400!important;
+}
+.kaynIntro,
+.kaynHubNotice,
+.kaynSectionHint,
+.kaynFotoProNotice{
+  background:linear-gradient(135deg,#fff8d7,#fffdf0)!important;
+  border:1px solid #ffe28a!important;
+  color:#694800!important;
+  box-shadow:0 8px 20px rgba(245,196,0,.10)!important;
+}
+.tab{
+  animation:kaynSmoothIn .18s ease-out;
+}
+@keyframes kaynSmoothIn{
+  from{opacity:.75;transform:translateY(5px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media (min-width:1024px){
+  main{
+    padding-top:100px!important;
+  }
+  .card{
+    max-width:100%!important;
+  }
+  .tab.active{
+    max-width:1440px!important;
+  }
+  .kaynDesktopWelcome{
+    margin-bottom:22px!important;
+  }
+}
+@media (max-width:700px){
+  .card{
+    border-radius:20px!important;
+  }
+  .row button,.row a{
+    width:100%!important;
+    text-align:center!important;
+  }
+}
+
 </style><link rel="icon" href="/logo.png">
 </head><body><div id="splash">
   <div class="splashLogo">
@@ -91,7 +273,7 @@ td,th{padding:10px!important;border-bottom:1px solid #eee!important}
 </div><header><div class="head"><img src="/logo.png"><div><h1>KAYN ANDAMIOS</h1><p>Plano · despiece · pedido · obras</p></div></div></header><nav class="noPrint"><button class="active" onclick="tab('obra',this)">Obra</button><button onclick="tab('plano',this)">Plano</button><button onclick="tab('despiece',this)">Despiece</button><button onclick="tab('pedido',this)">Pedido</button><button onclick="tab('fotos',this)">Fotos</button><button onclick="tab('contabilidad',this)">Contabilidad</button><button onclick="tab('guardar',this)">Guardar</button><button onclick="tab('informe',this)">Informe/PDF</button><button class="tabBtn" data-tab="despiece">Despiece</button></nav><main>
 
 <div class="kaynDesktopWelcome">
-  <div class="kaynDesktopWelcomeCard"><h2>KAYN ANDAMIOS PRO</h2><p>Modo ordenador activo: menú lateral, pantalla amplia y trabajo más cómodo con ratón.</p></div>
+  <div class="kaynDesktopWelcomeCard"><h2>KAYN ANDAMIOS PRO</h2><p>Modo ordenador activo: menú lateral, pantalla amplia, estilo premium y trabajo más cómodo con ratón.</p></div>
   <div class="kaynDesktopWelcomeCard"><h3>Planos</h3><p>Diseño, módulos y 3D.</p></div>
   <div class="kaynDesktopWelcomeCard"><h3>Despiece</h3><p>Material, PDF y CSV.</p></div>
   <div class="kaynDesktopWelcomeCard"><h3>Contabilidad</h3><p>Foto PRO e inventario.</p></div>
@@ -229,6 +411,11 @@ td,th{padding:10px!important;border-bottom:1px solid #eee!important}
 </section>
 
 <section id="guardar" class="tab"><div class="card"><h2>Guardar obras</h2><div class="row"><button class="yellow" onclick="saveWork()">Guardar obra</button><button class="light" onclick="newWork()">Nueva obra</button></div><div id="saved"></div></div></section><section id="informe" class="tab"><div class="card"><h2>Informe / PDF</h2><div class="row noPrint"><button class="yellow" onclick="printPDF()">Crear PDF</button><button class="light" onclick="copyReport()">Copiar informe</button></div><div id="report"></div></div></section>
+
+<div class="card" style="text-align:center;font-size:12px;color:#667085">
+  KAYN ANDAMIOS PRO · v12.9 Premium UI · Optimizado para móvil y ordenador
+</div>
+
 </main><script>
 setTimeout(()=>{$('splash').style.display='none'},1200);if('serviceWorker' in navigator){navigator.serviceWorker.register('./service-worker.js')}const $=id=>document.getElementById(id); const num=id=>{let e=$(id); return e?parseFloat(e.value||0):0}; const int=id=>{let e=$(id); return e?parseInt(e.value||0):0};
 
